@@ -2,37 +2,33 @@
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {
       colors: {
-        bg: "#0b0f14",
-        panel: "#111827",
-        acid: "#9CFF00",
-        acidSoft: "#7CFF6B",
-        textMain: "#E5E7EB",
-        textDim: "#9CA3AF",
+        bg: "#0b0e14",
+        panel: "rgba(255,255,255,0.06)",
+        accent: "#7CFF00",
+        muted: "#9CA3AF"
+      },
+      backdropBlur: {
+        xs: "2px"
       },
       boxShadow: {
-        glow: "0 0 40px rgba(156,255,0,0.25)",
-        soft: "0 10px 40px rgba(0,0,0,0.5)",
+        glow: "0 0 40px rgba(124,255,0,0.25)"
       },
       animation: {
         float: "float 6s ease-in-out infinite",
-        pulseSlow: "pulse 4s ease-in-out infinite",
-        fadeUp: "fadeUp 1s ease forwards",
+        pulseSlow: "pulse 6s infinite"
       },
       keyframes: {
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-10px)" },
-        },
-        fadeUp: {
-          "0%": { opacity: 0, transform: "translateY(20px)" },
-          "100%": { opacity: 1, transform: "translateY(0)" },
-        },
-      },
-    },
+          "50%": { transform: "translateY(-12px)" }
+        }
+      }
+    }
   },
-  plugins: [],
-};
+  plugins: []
+}
