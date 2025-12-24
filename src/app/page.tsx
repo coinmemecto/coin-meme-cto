@@ -107,9 +107,25 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
+            <motion.div
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+              className="inline-block mb-8"
+            >
+              <div className="relative w-[200px] h-[300px] mx-auto">
+                <Image
+                  src="/images/character-cool.png"
+                  alt="CoinMeme thinking"
+                  fill
+                  className="object-contain drop-shadow-xl"
+                />
+              </div>
+            </motion.div>
+
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
               Wait... what?
             </h2>
+            
             <div className="space-y-4 text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
               <p>This started as a joke.</p>
               <p>Then people didn't leave.</p>
@@ -131,7 +147,59 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-900">
               The Formula
             </h2>
-            <motion.p className="mt-8 text-xl text-gray-700 italic">
+
+            <motion.div
+              animate={{ y: [0, -12, 0] }}
+              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+              className="inline-block mb-8"
+            >
+              <div className="relative w-[350px] h-[500px] mx-auto">
+                <Image
+                  src="/images/character-lab.png"
+                  alt="CoinMeme in lab"
+                  fill
+                  className="object-contain drop-shadow-2xl"
+                />
+              </div>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-8 mt-12">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="bg-white/40 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-gray-200"
+              >
+                <div className="relative w-full h-[300px]">
+                  <Image
+                    src="/images/formula-viral.png"
+                    alt="Viral Formula"
+                    fill
+                    className="object-contain rounded-lg"
+                  />
+                </div>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="bg-white/40 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-gray-200"
+              >
+                <div className="relative w-full h-[300px]">
+                  <Image
+                    src="/images/formula-moon.png"
+                    alt="Moon Formula"
+                    fill
+                    className="object-contain rounded-lg"
+                  />
+                </div>
+              </motion.div>
+            </div>
+
+            <motion.p
+              className="mt-8 text-xl text-gray-700 italic"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+            >
               "Damn... that's actually true."
             </motion.p>
           </motion.div>
@@ -147,15 +215,68 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
+            <motion.div
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
+              className="inline-block mb-8"
+            >
+              <div className="relative w-[300px] h-[400px] mx-auto">
+                <Image
+                  src="/images/character-traveler.png"
+                  alt="CoinMeme traveling"
+                  fill
+                  className="object-contain drop-shadow-xl"
+                />
+              </div>
+            </motion.div>
+
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-900">
               CTO Reality
             </h2>
+            
             <div className="space-y-6 text-lg md:text-xl text-gray-700">
               <p>No dev.</p>
               <p>No paid marketing.</p>
               <p className="text-blue-500 font-semibold text-2xl">
                 Direction over promises.
               </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 relative">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <motion.div
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+              className="inline-block mb-8"
+            >
+              <div className="relative w-[400px] h-[300px] mx-auto">
+                <Image
+                  src="/images/formula-community.png"
+                  alt="Community is everything"
+                  fill
+                  className="object-contain drop-shadow-xl rounded-lg"
+                />
+              </div>
+            </motion.div>
+
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-900">
+              Why It Works
+            </h2>
+            
+            <div className="space-y-6 text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
+              <p>It mocks trends instead of chasing them.</p>
+              <p>It feels discovered, not sold.</p>
+              <p className="text-green-500 font-semibold">The formula keeps evolving.</p>
             </div>
           </motion.div>
         </div>
@@ -175,6 +296,21 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
+            <motion.div
+              animate={{ y: [0, -15, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="inline-block mb-8"
+            >
+              <div className="relative w-[250px] h-[350px] mx-auto">
+                <Image
+                  src="/images/character-confident.png"
+                  alt="CoinMeme confident"
+                  fill
+                  className="object-contain drop-shadow-2xl"
+                />
+              </div>
+            </motion.div>
+
             <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
               You're either early...
             </h2>
