@@ -53,14 +53,15 @@ export default function Home() {
               }}
               className="inline-block"
             >
-              <Image
-                src="/images/character-standing.png"
-                alt="CoinMeme CTO"
-                width={300}
-                height={400}
-                className="mx-auto drop-shadow-2xl"
-                priority
-              />
+              <div className="relative w-[300px] h-[400px] mx-auto">
+                <Image
+                  src="/images/character-standing.png"
+                  alt="CoinMeme CTO"
+                  fill
+                  className="object-contain drop-shadow-2xl"
+                  priority
+                />
+              </div>
             </motion.div>
           </motion.div>
 
@@ -142,13 +143,14 @@ export default function Home() {
               }}
               className="inline-block mb-8"
             >
-              <Image
-                src="/images/character-cool.png"
-                alt="CoinMeme thinking"
-                width={200}
-                height={300}
-                className="mx-auto drop-shadow-xl"
-              />
+              <div className="relative w-[200px] h-[300px] mx-auto">
+                <Image
+                  src="/images/character-cool.png"
+                  alt="CoinMeme thinking"
+                  fill
+                  className="object-contain drop-shadow-xl"
+                />
+              </div>
             </motion.div>
 
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
@@ -190,13 +192,14 @@ export default function Home() {
               }}
               className="inline-block mb-8"
             >
-              <Image
-                src="/images/character-lab.png"
-                alt="CoinMeme in lab"
-                width={350}
-                height={500}
-                className="mx-auto drop-shadow-2xl"
-              />
+              <div className="relative w-[350px] h-[500px] mx-auto">
+                <Image
+                  src="/images/character-lab.png"
+                  alt="CoinMeme in lab"
+                  fill
+                  className="object-contain drop-shadow-2xl"
+                />
+              </div>
             </motion.div>
 
             {/* Formula displays */}
@@ -205,26 +208,28 @@ export default function Home() {
                 whileHover={{ scale: 1.05 }}
                 className="bg-white/40 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-gray-200"
               >
-                <Image
-                  src="/images/formula-viral.png"
-                  alt="Viral Formula"
-                  width={500}
-                  height={300}
-                  className="w-full rounded-lg"
-                />
+                <div className="relative w-full h-[300px]">
+                  <Image
+                    src="/images/formula-viral.png"
+                    alt="Viral Formula"
+                    fill
+                    className="object-contain rounded-lg"
+                  />
+                </div>
               </motion.div>
 
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="bg-white/40 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-gray-200"
               >
-                <Image
-                  src="/images/formula-moon.png"
-                  alt="Moon Formula"
-                  width={500}
-                  height={300}
-                  className="w-full rounded-lg"
-                />
+                <div className="relative w-full h-[300px]">
+                  <Image
+                    src="/images/formula-moon.png"
+                    alt="Moon Formula"
+                    fill
+                    className="object-contain rounded-lg"
+                  />
+                </div>
               </motion.div>
             </div>
 
@@ -263,13 +268,14 @@ export default function Home() {
               }}
               className="inline-block mb-8"
             >
-              <Image
-                src="/images/character-traveler.png"
-                alt="CoinMeme traveling"
-                width={300}
-                height={400}
-                className="mx-auto drop-shadow-xl"
-              />
+              <div className="relative w-[300px] h-[400px] mx-auto">
+                <Image
+                  src="/images/character-traveler.png"
+                  alt="CoinMeme traveling"
+                  fill
+                  className="object-contain drop-shadow-xl"
+                />
+              </div>
             </motion.div>
 
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-900">
@@ -297,7 +303,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            {/* Teacher character */}
+            {/* Community formula */}
             <motion.div
               animate={{
                 y: [0, -10, 0],
@@ -309,13 +315,14 @@ export default function Home() {
               }}
               className="inline-block mb-8"
             >
-              <Image
-                src="/images/formula-community.png"
-                alt="Community is everything"
-                width={400}
-                height={300}
-                className="mx-auto drop-shadow-xl rounded-lg"
-              />
+              <div className="relative w-[400px] h-[300px] mx-auto">
+                <Image
+                  src="/images/formula-community.png"
+                  alt="Community is everything"
+                  fill
+                  className="object-contain drop-shadow-xl rounded-lg"
+                />
+              </div>
             </motion.div>
 
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-900">
@@ -364,13 +371,14 @@ export default function Home() {
               }}
               className="inline-block mb-8"
             >
-              <Image
-                src="/images/character-confident.png"
-                alt="CoinMeme confident"
-                width={250}
-                height={350}
-                className="mx-auto drop-shadow-2xl"
-              />
+              <div className="relative w-[250px] h-[350px] mx-auto">
+                <Image
+                  src="/images/character-confident.png"
+                  alt="CoinMeme confident"
+                  fill
+                  className="object-contain drop-shadow-2xl"
+                />
+              </div>
             </motion.div>
 
             <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
@@ -395,7 +403,7 @@ export default function Home() {
             </motion.div>
 
             {/* Social links */}
-            <div className="mt-12 flex gap-6 justify-center">
+            <div className="mt-12 flex gap-6 justify-center flex-wrap">
               
                 href="https://x.com/i/communities/2002714238331080902"
                 target="_blank"
