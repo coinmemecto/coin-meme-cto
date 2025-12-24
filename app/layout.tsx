@@ -2,7 +2,7 @@ import "./globals.css";
 
 export const metadata = {
   title: "Coin-Meme CTO",
-  description: "The memecoin formula evolved.",
+  description: "A memecoin that evolved without permission."
 };
 
 export default function RootLayout({
@@ -12,7 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
