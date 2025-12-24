@@ -2,17 +2,13 @@ import "./globals.css";
 
 export const metadata = {
   title: "Coin-Meme CTO",
-  description: "A memecoin that evolved without permission."
+  description: "A memecoin experiment that evolved without permission. No roadmap. No promises. Just the formula.",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="antialiased">{children}</body>
+      <body className="bg-ink text-white antialiased">{children}</body>
     </html>
   );
 }
