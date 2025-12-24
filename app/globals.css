@@ -2,42 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  background-color: #070A0F;
-  color: #E6E6E6;
-  scroll-behavior: smooth;
+html, body {
+  background-color: #0b0f14;
+  color: #E5E7EB;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* Smooth typography */
-h1, h2, h3 {
-  letter-spacing: -0.02em;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-/* Soft image framing (VERY important) */
-.image-frame {
-  border-radius: 1rem;
-  background: linear-gradient(
-    180deg,
-    rgba(255,255,255,0.06),
-    rgba(255,255,255,0.02)
-  );
-  padding: 0.75rem;
+.section {
+  @apply max-w-6xl mx-auto px-6 py-24;
 }
 
-/* Formula glow text */
-.glow-text {
-  color: #A4FF4F;
-  text-shadow: 0 0 15px rgba(164,255,79,0.6);
+.panel {
+  @apply bg-panel rounded-2xl shadow-soft border border-white/5;
 }
 
-/* Subtle divider */
-.section-divider {
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255,255,255,0.15),
-    transparent
-  );
+.glow {
+  box-shadow: 0 0 40px rgba(156,255,0,0.25);
+}
+
+.subtle {
+  color: #9CA3AF;
 }
