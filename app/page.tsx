@@ -1,127 +1,102 @@
 export default function Home() {
   return (
-    <main className="bg-black text-white overflow-x-hidden">
+    <main>
 
       {/* HERO */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center">
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/90 to-black z-0" />
-
-        <p className="tracking-[0.3em] text-xs text-green-400 mb-6 animate-fade-in">
-          EXPERIMENT IN PROGRESS
+      <section className="section text-center">
+        <p className="uppercase tracking-widest text-sm text-acid mb-4">
+          Experiment in Progress
         </p>
 
-        <h1 className="text-5xl md:text-7xl font-extrabold mb-6 animate-rise">
+        <h1 className="text-5xl md:text-7xl font-bold mb-6">
           Coin-Meme CTO
         </h1>
 
-        <p className="text-gray-300 max-w-xl mb-12 animate-fade-in delay-200">
+        <p className="text-lg md:text-xl text-textDim max-w-2xl mx-auto">
           A memecoin that evolved without permission.
           <br />
           No roadmap. No leader. No reset.
         </p>
 
-        <img
-          src="/images/hero.png"
-          className="w-full max-w-md animate-float shadow-[0_0_80px_rgba(34,197,94,0.35)]"
-          alt="The Experiment"
-        />
-
-        <div className="absolute bottom-8 text-xs text-gray-500 animate-pulse">
-          ↓ Observe the experiment ↓
+        <div className="mt-16 animate-fadeUp">
+          <img
+            src="/images/hero.png"
+            alt="Coin Meme Hero"
+            className="mx-auto max-w-xl rounded-xl shadow-glow animate-float"
+          />
         </div>
       </section>
 
-      {/* FORMULA */}
-      <section className="relative py-32 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+      {/* FORMULA SECTION */}
+      <section className="section">
+        <div className="panel p-10 grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-4xl font-bold mb-6">
-              The Formula
+              Behold the Formula
             </h2>
 
-            <p className="text-lg text-gray-300 mb-4">
-              Viral Memecoin =
-            </p>
-
-            <p className="text-2xl font-mono text-green-400 mb-6">
-              (Humor × Community) ÷ Market Dynamics
-            </p>
-
-            <p className="text-gray-400">
-              You don’t control it.
+            <p className="text-textDim text-lg">
+              Not financial advice.
               <br />
-              You either participate…
-              <br />
-              or you watch it evolve without you.
+              Just an observation.
             </p>
           </div>
 
           <img
             src="/images/formula.png"
-            className="w-full max-w-sm mx-auto animate-glow"
-            alt="Formula"
+            alt="The Formula"
+            className="rounded-xl shadow-glow"
           />
         </div>
       </section>
 
-      {/* COMMUNITY */}
-      <section className="relative bg-neutral-900 py-32 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+      {/* CHARACTER STORY */}
+      <section className="section">
+        <div className="grid md:grid-cols-2 gap-16 items-center">
           <img
             src="/images/community.png"
-            className="w-full max-w-sm mx-auto animate-float"
             alt="Community"
+            className="rounded-xl shadow-soft"
           />
 
           <div>
             <h2 className="text-4xl font-bold mb-6">
-              Community Is the Catalyst
+              No One Is In Charge
             </h2>
 
-            <p className="text-gray-300 text-lg">
-              No insiders.
+            <p className="text-lg text-textDim leading-relaxed">
+              This isn’t a brand.
               <br />
-              No guarantees.
+              It’s a phenomenon.
+              <br /><br />
+              It moves when people believe.
               <br />
-              Just shared belief…
-              <br />
-              and collective momentum.
+              It rests when they don’t.
             </p>
           </div>
         </div>
       </section>
 
-      {/* FINAL CTA */}
-      <section className="py-32 text-center px-6">
-        <h2 className="text-5xl font-extrabold mb-8">
-          The Experiment Is Live
+      {/* MOON */}
+      <section className="section text-center">
+        <h2 className="text-4xl font-bold mb-8">
+          Destination Unknown
         </h2>
 
-        <p className="text-gray-400 mb-12">
-          Most people will overthink.
-          <br />
-          Some will watch.
-          <br />
-          A few will ape.
-        </p>
-
-        <div className="flex justify-center gap-8 text-green-400 text-sm">
-          <a href="https://dexscreener.com/solana/gw3hhfzhunahywjrl9fkvybrrifnazc7bs92s5enusrx" target="_blank">
-            View Chart
-          </a>
-          <a href="https://t.me/CoinMemeCTO" target="_blank">
-            Telegram
-          </a>
-          <a href="https://x.com/i/communities/2002714238331080902" target="_blank">
-            X Community
-          </a>
+        <div className="flex justify-center">
+          <img
+            src="/images/moon.png"
+            alt="Moon"
+            className="max-w-md rounded-full shadow-glow animate-pulseSlow"
+          />
         </div>
       </section>
 
-      {/* DISCLAIMER */}
-      <footer className="py-10 text-center text-xs text-gray-600">
+      {/* FOOTER DISCLAIMER */}
+      <footer className="section text-center subtle text-sm">
         THIS IS AN EXPERIMENT. FOR ENTERTAINMENT PURPOSES ONLY.
       </footer>
+
     </main>
   );
 }
