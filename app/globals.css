@@ -4,8 +4,40 @@
 
 html,
 body {
-  background-color: #09090b;
-  color: #f4f4f5;
-  margin: 0;
-  padding: 0;
+  background-color: #070A0F;
+  color: #E6E6E6;
+  scroll-behavior: smooth;
+}
+
+/* Smooth typography */
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+
+/* Soft image framing (VERY important) */
+.image-frame {
+  border-radius: 1rem;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.02)
+  );
+  padding: 0.75rem;
+}
+
+/* Formula glow text */
+.glow-text {
+  color: #A4FF4F;
+  text-shadow: 0 0 15px rgba(164,255,79,0.6);
+}
+
+/* Subtle divider */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.15),
+    transparent
+  );
 }
