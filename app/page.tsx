@@ -1,133 +1,88 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-950 to-black text-white">
+    <main className="min-h-screen bg-black text-white px-6 py-12">
+      {/* Wrapper */}
+      <div className="max-w-5xl mx-auto space-y-24">
 
-      {/* HERO */}
-      <section className="relative flex flex-col items-center text-center px-6 pt-24 pb-32">
-        <div className="animate-pulse mb-6 text-xs tracking-widest text-green-400">
-          EXPERIMENT IN PROGRESS
-        </div>
+        {/* Header */}
+        <header className="text-center space-y-4 animate-fade-in">
+          <p className="text-xs tracking-widest text-gray-400 uppercase">
+            Experiment in Progress
+          </p>
 
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          Coin-Meme CTO
-        </h1>
+          <h1 className="text-4xl md:text-5xl font-bold">
+            Coin-Meme CTO
+          </h1>
 
-        <p className="max-w-xl text-slate-300 mb-10">
-          A memecoin experiment that evolved on its own.
-          No roadmap. No promises. Just the formula.
-        </p>
+          <p className="text-gray-300 max-w-2xl mx-auto">
+            A memecoin experiment that evolved on its own.
+            No roadmap. No promises. Just the formula.
+          </p>
+        </header>
 
-        <Image
-          src="/images/hero.png"
-          alt="Coin Meme Hero"
-          width={420}
-          height={420}
-          priority
-          className="rounded-xl shadow-[0_0_40px_rgba(34,197,94,0.35)]"
-        />
+        {/* Hero Image */}
+        <section className="flex justify-center animate-float">
+          <img
+            src="/images/hero.png"
+            alt="Behold the Formula"
+            className="w-full max-w-xl rounded-xl shadow-xl"
+          />
+        </section>
 
-        {/* BUTTONS */}
-        <div className="mt-10 flex flex-wrap gap-4 justify-center">
-          <a
-            href="https://dexscreener.com/solana/gw3hhfzhunahywjrl9fkvybrrifnazc7bs92s5enusrx"
-            target="_blank"
-            className="px-6 py-3 rounded-lg bg-green-500 text-black font-semibold hover:bg-green-400 transition"
-          >
-            View Chart
-          </a>
+        {/* Formula Section */}
+        <section className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="space-y-4 animate-fade-in">
+            <h2 className="text-2xl font-semibold">The Formula</h2>
+            <p className="text-gray-300">
+              Viral memecoins don’t follow rules.
+              They follow behavior, humor, and shared belief.
+            </p>
+          </div>
 
-          <a
-            href="https://t.me/CoinMemeCTO"
-            target="_blank"
-            className="px-6 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 transition"
-          >
-            Telegram
-          </a>
+          <img
+            src="/images/formula.png"
+            alt="The Formula Chalkboard"
+            className="w-full rounded-lg shadow-lg hover:scale-[1.02] transition-transform"
+          />
+        </section>
 
-          <a
-            href="https://x.com/i/communities/2002714238331080902"
-            target="_blank"
-            className="px-6 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 transition"
-          >
-            X Community
-          </a>
-        </div>
-      </section>
+        {/* Community Section */}
+        <section className="grid md:grid-cols-2 gap-12 items-center">
+          <img
+            src="/images/community.png"
+            alt="Community Equals Everything"
+            className="w-full rounded-lg shadow-lg hover:scale-[1.02] transition-transform"
+          />
 
-      {/* FORMULA */}
-      <section className="px-6 py-24 flex flex-col items-center gap-12 bg-slate-950">
-        <h2 className="text-3xl font-semibold">
-          The Formula
-        </h2>
+          <div className="space-y-4 animate-fade-in">
+            <h2 className="text-2xl font-semibold">
+              Community = Everything
+            </h2>
+            <p className="text-gray-300">
+              No dev worship. No false authority.
+              Just collective participation and observation.
+            </p>
+          </div>
+        </section>
 
-        <Image
-          src="/images/formula.png"
-          alt="Coin Meme Formula"
-          width={520}
-          height={520}
-          className="rounded-xl shadow-lg"
-        />
+        {/* Moon Formula */}
+        <section className="text-center space-y-6 animate-fade-in">
+          <h2 className="text-2xl font-semibold">
+            Moon-Landing Formula
+          </h2>
 
-        <p className="max-w-2xl text-slate-300 text-center">
-          Viral Memecoin = (Humor × Community) ÷ Market Dynamics
-        </p>
-      </section>
+          <img
+            src="/images/moon.png"
+            alt="Moon Formula"
+            className="w-full max-w-md mx-auto rounded-lg shadow-lg hover:scale-[1.03] transition-transform"
+          />
+        </section>
 
-      {/* MOON */}
-      <section className="px-6 py-24 flex flex-col items-center gap-12">
-        <h2 className="text-3xl font-semibold">
-          Moon-Landing Formula
-        </h2>
-
-        <Image
-          src="/images/moon.png"
-          alt="Moon Landing Formula"
-          width={520}
-          height={520}
-          className="rounded-xl shadow-lg"
-        />
-
-        <p className="text-slate-300">
-          BUY + HODL + DCA = MOON
-        </p>
-      </section>
-
-      {/* COMMUNITY */}
-      <section className="px-6 py-24 flex flex-col items-center gap-12 bg-slate-950">
-        <h2 className="text-3xl font-semibold">
-          Community
-        </h2>
-
-        <Image
-          src="/images/community.png"
-          alt="Community"
-          width={520}
-          height={520}
-          className="rounded-xl shadow-lg"
-        />
-
-        <p className="text-slate-300 text-xl">
-          Community = EVERYTHING
-        </p>
-      </section>
-
-      {/* CA */}
-      <section className="px-6 py-16 text-center">
-        <p className="text-slate-400 text-sm mb-2">
-          Contract Address
-        </p>
-        <code className="block bg-slate-800 rounded-lg p-4 text-green-400 break-all">
-          BBqYTFGCj7Uia5qWHHQmxRx4jhQcFHydEynv2r3ipump
-        </code>
-      </section>
-
-      {/* FOOTER */}
-      <footer className="px-6 py-10 text-center text-xs text-slate-500">
-        THIS IS AN EXPERIMENT. I REPEAT, THIS IS AN EXPERIMENT.
-        FOR ENTERTAINMENT PURPOSES ONLY.
-      </footer>
+        {/* Footer Disclaimer */}
+        <footer className="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
+          THIS IS AN EXPERIMENT. FOR ENTERTAINMENT PURPOSES ONLY.
+        </footer>
+      </div>
     </main>
   );
 }
