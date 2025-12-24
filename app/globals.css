@@ -3,28 +3,12 @@
 @tailwind utilities;
 
 html, body {
-  background-color: #0b0f14;
-  color: #E5E7EB;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0b0e14;
+  color: white;
+  scroll-behavior: smooth;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.section {
-  @apply max-w-6xl mx-auto px-6 py-24;
-}
-
-.panel {
-  @apply bg-panel rounded-2xl shadow-soft border border-white/5;
-}
-
-.glow {
-  box-shadow: 0 0 40px rgba(156,255,0,0.25);
-}
-
-.subtle {
-  color: #9CA3AF;
+::selection {
+  background: #7cff00;
+  color: black;
 }
