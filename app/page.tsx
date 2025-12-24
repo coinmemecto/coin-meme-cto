@@ -1,100 +1,84 @@
 export default function Home() {
   return (
-    <main>
+    <main className="relative overflow-hidden">
 
-      {/* HERO */}
-      <section className="section text-center">
-        <p className="uppercase tracking-widest text-sm text-acid mb-4">
-          Experiment in Progress
+      {/* Ambient gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#121826] via-[#0b0e14] to-black" />
+
+      {/* Glow accents */}
+      <div className="absolute -top-32 -left-32 w-96 h-96 bg-accent/20 blur-[120px]" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/10 blur-[140px]" />
+
+      {/* CONTENT */}
+      <section className="relative z-10 min-h-screen flex flex-col justify-center px-6 max-w-6xl mx-auto">
+
+        {/* Header */}
+        <p className="text-xs tracking-widest text-muted mb-4">
+          EXPERIMENT IN PROGRESS
         </p>
 
-        <h1 className="text-5xl md:text-7xl font-bold mb-6">
-          Coin-Meme CTO
+        <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
+          Coin-Meme <span className="text-accent">CTO</span>
         </h1>
 
-        <p className="text-lg md:text-xl text-textDim max-w-2xl mx-auto">
+        <p className="text-lg text-muted max-w-xl mb-10">
           A memecoin that evolved without permission.
           <br />
           No roadmap. No leader. No reset.
         </p>
 
-        <div className="mt-16 animate-fadeUp">
-          <img
-            src="/images/hero.png"
-            alt="Coin Meme Hero"
-            className="mx-auto max-w-xl rounded-xl shadow-glow animate-float"
-          />
+        {/* CTA */}
+        <div className="flex gap-4 mb-16">
+          <a
+            href="#"
+            className="px-6 py-3 rounded-xl bg-accent text-black font-semibold shadow-glow hover:scale-105 transition"
+          >
+            View Chart
+          </a>
+
+          <a
+            href="#"
+            className="px-6 py-3 rounded-xl border border-white/20 text-white hover:bg-white/10 transition"
+          >
+            Join Community
+          </a>
+        </div>
+
+        {/* Glass Panels */}
+        <div className="grid md:grid-cols-3 gap-6">
+
+          {[
+            {
+              title: "The Formula",
+              text: "Humor × Community ÷ Market Chaos"
+            },
+            {
+              title: "CTO Reality",
+              text: "No devs. No paid hype. Direction over promises."
+            },
+            {
+              title: "Why It Works",
+              text: "It mocks the system while surviving it."
+            }
+          ].map((card, i) => (
+            <div
+              key={i}
+              className="rounded-2xl bg-panel backdrop-blur-xl border border-white/10 p-6 hover:border-accent/40 transition"
+            >
+              <h3 className="text-xl font-semibold mb-2">
+                {card.title}
+              </h3>
+              <p className="text-muted text-sm">
+                {card.text}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* FORMULA SECTION */}
-      <section className="section">
-        <div className="panel p-10 grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-4xl font-bold mb-6">
-              Behold the Formula
-            </h2>
-
-            <p className="text-textDim text-lg">
-              Not financial advice.
-              <br />
-              Just an observation.
-            </p>
-          </div>
-
-          <img
-            src="/images/formula.png"
-            alt="The Formula"
-            className="rounded-xl shadow-glow"
-          />
-        </div>
-      </section>
-
-      {/* CHARACTER STORY */}
-      <section className="section">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          <img
-            src="/images/community.png"
-            alt="Community"
-            className="rounded-xl shadow-soft"
-          />
-
-          <div>
-            <h2 className="text-4xl font-bold mb-6">
-              No One Is In Charge
-            </h2>
-
-            <p className="text-lg text-textDim leading-relaxed">
-              This isn’t a brand.
-              <br />
-              It’s a phenomenon.
-              <br /><br />
-              It moves when people believe.
-              <br />
-              It rests when they don’t.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* MOON */}
-      <section className="section text-center">
-        <h2 className="text-4xl font-bold mb-8">
-          Destination Unknown
-        </h2>
-
-        <div className="flex justify-center">
-          <img
-            src="/images/moon.png"
-            alt="Moon"
-            className="max-w-md rounded-full shadow-glow animate-pulseSlow"
-          />
-        </div>
-      </section>
-
-      {/* FOOTER DISCLAIMER */}
-      <footer className="section text-center subtle text-sm">
-        THIS IS AN EXPERIMENT. FOR ENTERTAINMENT PURPOSES ONLY.
+      {/* Footer */}
+      <footer className="relative z-10 mt-24 border-t border-white/10 py-8 text-center text-muted text-sm">
+        © Coin-Meme CTO — The formula keeps evolving.
       </footer>
 
     </main>
