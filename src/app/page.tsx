@@ -66,7 +66,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             
-              href="https://dexscreener.com/solana/gw3hhfzhunahywjrl9fkvybrrifnazc7bs92s5enusrx"
+           <a   href="https://dexscreener.com/solana/gw3hhfzhunahywjrl9fkvybrrifnazc7bs92s5enusrx"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-white border-2 border-gray-300 rounded-full text-gray-900 font-semibold hover:border-blue-500 hover:shadow-lg transition-all"
@@ -74,7 +74,7 @@ export default function Home() {
               View Chart
             </a>
             
-              href="https://t.me/CoinMemeCTO"
+            <a  href="https://t.me/CoinMemeCTO"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-blue-500 text-white rounded-full font-semibold hover:bg-blue-600 hover:shadow-lg transition-all"
@@ -139,7 +139,7 @@ export default function Home() {
 
             <div className="flex justify-center">
               
-                href="https://t.me/CoinMemeCTO"
+            <a    href="https://t.me/CoinMemeCTO"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-12 py-5 bg-blue-500 text-white rounded-full font-bold text-xl hover:bg-blue-600 hover:shadow-2xl transition-all"
@@ -149,7 +149,7 @@ export default function Home() {
             </div>
     <div className="mt-12 flex gap-6 justify-center flex-wrap">
               
-                href="https://x.com/i/communities/2002714238331080902"
+            <a    href="https://x.com/i/communities/2002714238331080902"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-blue-500 transition-colors font-medium"
@@ -158,7 +158,7 @@ export default function Home() {
               </a>
               <span className="text-gray-400">•</span>
               
-                href="https://t.me/CoinMemeCTO"
+            <a    href="https://t.me/CoinMemeCTO"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-blue-500 transition-colors font-medium"
@@ -167,7 +167,7 @@ export default function Home() {
               </a>
               <span className="text-gray-400">•</span>
               
-                href="https://dexscreener.com/solana/gw3hhfzhunahywjrl9fkvybrrifnazc7bs92s5enusrx"
+            <a    href="https://dexscreener.com/solana/gw3hhfzhunahywjrl9fkvybrrifnazc7bs92s5enusrx"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-blue-500 transition-colors font-medium"
