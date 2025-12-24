@@ -419,7 +419,7 @@ export default function Home() {
             
             <div className="space-y-8 text-xl md:text-2xl text-gray-700 font-light">
               <p>No dev.</p>
-              <p>No paid marketing.</p>
+              <p>No roadmap.</p>
               <p className="text-blue-500 font-semibold text-3xl md:text-4xl mt-8">
                 Direction over promises.
               </p>
