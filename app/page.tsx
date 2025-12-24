@@ -1,88 +1,127 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white px-6 py-12">
-      {/* Wrapper */}
-      <div className="max-w-5xl mx-auto space-y-24">
+    <main className="bg-black text-white overflow-x-hidden">
 
-        {/* Header */}
-        <header className="text-center space-y-4 animate-fade-in">
-          <p className="text-xs tracking-widest text-gray-400 uppercase">
-            Experiment in Progress
-          </p>
+      {/* HERO */}
+      <section className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center">
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/90 to-black z-0" />
 
-          <h1 className="text-4xl md:text-5xl font-bold">
-            Coin-Meme CTO
-          </h1>
+        <p className="tracking-[0.3em] text-xs text-green-400 mb-6 animate-fade-in">
+          EXPERIMENT IN PROGRESS
+        </p>
 
-          <p className="text-gray-300 max-w-2xl mx-auto">
-            A memecoin experiment that evolved on its own.
-            No roadmap. No promises. Just the formula.
-          </p>
-        </header>
+        <h1 className="text-5xl md:text-7xl font-extrabold mb-6 animate-rise">
+          Coin-Meme CTO
+        </h1>
 
-        {/* Hero Image */}
-        <section className="flex justify-center animate-float">
-          <img
-            src="/images/hero.png"
-            alt="Behold the Formula"
-            className="w-full max-w-xl rounded-xl shadow-xl"
-          />
-        </section>
+        <p className="text-gray-300 max-w-xl mb-12 animate-fade-in delay-200">
+          A memecoin that evolved without permission.
+          <br />
+          No roadmap. No leader. No reset.
+        </p>
 
-        {/* Formula Section */}
-        <section className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-4 animate-fade-in">
-            <h2 className="text-2xl font-semibold">The Formula</h2>
-            <p className="text-gray-300">
-              Viral memecoins don’t follow rules.
-              They follow behavior, humor, and shared belief.
+        <img
+          src="/images/hero.png"
+          className="w-full max-w-md animate-float shadow-[0_0_80px_rgba(34,197,94,0.35)]"
+          alt="The Experiment"
+        />
+
+        <div className="absolute bottom-8 text-xs text-gray-500 animate-pulse">
+          ↓ Observe the experiment ↓
+        </div>
+      </section>
+
+      {/* FORMULA */}
+      <section className="relative py-32 px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 className="text-4xl font-bold mb-6">
+              The Formula
+            </h2>
+
+            <p className="text-lg text-gray-300 mb-4">
+              Viral Memecoin =
+            </p>
+
+            <p className="text-2xl font-mono text-green-400 mb-6">
+              (Humor × Community) ÷ Market Dynamics
+            </p>
+
+            <p className="text-gray-400">
+              You don’t control it.
+              <br />
+              You either participate…
+              <br />
+              or you watch it evolve without you.
             </p>
           </div>
 
           <img
             src="/images/formula.png"
-            alt="The Formula Chalkboard"
-            className="w-full rounded-lg shadow-lg hover:scale-[1.02] transition-transform"
+            className="w-full max-w-sm mx-auto animate-glow"
+            alt="Formula"
           />
-        </section>
+        </div>
+      </section>
 
-        {/* Community Section */}
-        <section className="grid md:grid-cols-2 gap-12 items-center">
+      {/* COMMUNITY */}
+      <section className="relative bg-neutral-900 py-32 px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <img
             src="/images/community.png"
-            alt="Community Equals Everything"
-            className="w-full rounded-lg shadow-lg hover:scale-[1.02] transition-transform"
+            className="w-full max-w-sm mx-auto animate-float"
+            alt="Community"
           />
 
-          <div className="space-y-4 animate-fade-in">
-            <h2 className="text-2xl font-semibold">
-              Community = Everything
+          <div>
+            <h2 className="text-4xl font-bold mb-6">
+              Community Is the Catalyst
             </h2>
-            <p className="text-gray-300">
-              No dev worship. No false authority.
-              Just collective participation and observation.
+
+            <p className="text-gray-300 text-lg">
+              No insiders.
+              <br />
+              No guarantees.
+              <br />
+              Just shared belief…
+              <br />
+              and collective momentum.
             </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Moon Formula */}
-        <section className="text-center space-y-6 animate-fade-in">
-          <h2 className="text-2xl font-semibold">
-            Moon-Landing Formula
-          </h2>
+      {/* FINAL CTA */}
+      <section className="py-32 text-center px-6">
+        <h2 className="text-5xl font-extrabold mb-8">
+          The Experiment Is Live
+        </h2>
 
-          <img
-            src="/images/moon.png"
-            alt="Moon Formula"
-            className="w-full max-w-md mx-auto rounded-lg shadow-lg hover:scale-[1.03] transition-transform"
-          />
-        </section>
+        <p className="text-gray-400 mb-12">
+          Most people will overthink.
+          <br />
+          Some will watch.
+          <br />
+          A few will ape.
+        </p>
 
-        {/* Footer Disclaimer */}
-        <footer className="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
-          THIS IS AN EXPERIMENT. FOR ENTERTAINMENT PURPOSES ONLY.
-        </footer>
-      </div>
+        <div className="flex justify-center gap-8 text-green-400 text-sm">
+          <a href="https://dexscreener.com/solana/gw3hhfzhunahywjrl9fkvybrrifnazc7bs92s5enusrx" target="_blank">
+            View Chart
+          </a>
+          <a href="https://t.me/CoinMemeCTO" target="_blank">
+            Telegram
+          </a>
+          <a href="https://x.com/i/communities/2002714238331080902" target="_blank">
+            X Community
+          </a>
+        </div>
+      </section>
+
+      {/* DISCLAIMER */}
+      <footer className="py-10 text-center text-xs text-gray-600">
+        THIS IS AN EXPERIMENT. FOR ENTERTAINMENT PURPOSES ONLY.
+      </footer>
     </main>
   );
 }
