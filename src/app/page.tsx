@@ -4,9 +4,102 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 
 export default function Home() {
+  const floatingBeaker = {
+    animate: {
+      y: [-100, 800],
+      x: [0, 50, -30, 20],
+      rotate: [0, 360],
+      opacity: [0, 1, 1, 0],
+    },
+    transition: {
+      duration: 15,
+      repeat: Infinity,
+      ease: "linear"
+    }
+  }
+
+  const floatingFormula = {
+    animate: {
+      y: [-50, 900],
+      x: [0, -40, 30, -20],
+      opacity: [0, 0.6, 0.6, 0],
+    },
+    transition: {
+      duration: 12,
+      repeat: Infinity,
+      ease: "linear"
+    }
+  }
+
   return (
     <main className="relative overflow-hidden">
-      <section className="min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden">
+      <div className="fixed inset-0 pointer-events-none z-0">
+        <motion.div
+          className="absolute text-6xl opacity-20"
+          style={{ left: '10%', top: '-10%' }}
+          {...floatingBeaker}
+          transition={{ ...floatingBeaker.transition, delay: 0 }}
+        >
+          🧪
+        </motion.div>
+        <motion.div
+          className="absolute text-5xl opacity-20"
+          style={{ left: '80%', top: '-15%' }}
+          {...floatingBeaker}
+          transition={{ ...floatingBeaker.transition, delay: 3 }}
+        >
+          ⚗️
+        </motion.div>
+        <motion.div
+          className="absolute text-4xl opacity-15"
+          style={{ left: '30%', top: '-8%' }}
+          {...floatingFormula}
+          transition={{ ...floatingFormula.transition, delay: 1.5 }}
+        >
+          Σ
+        </motion.div>
+        <motion.div
+          className="absolute text-5xl opacity-15"
+          style={{ left: '60%', top: '-12%' }}
+          {...floatingFormula}
+          transition={{ ...floatingFormula.transition, delay: 4 }}
+        >
+          π
+        </motion.div>
+        <motion.div
+          className="absolute text-4xl opacity-20"
+          style={{ left: '45%', top: '-10%' }}
+          {...floatingBeaker}
+          transition={{ ...floatingBeaker.transition, delay: 6 }}
+        >
+          🔬
+        </motion.div>
+        <motion.div
+          className="absolute text-6xl opacity-15"
+          style={{ left: '70%', top: '-5%' }}
+          {...floatingFormula}
+          transition={{ ...floatingFormula.transition, delay: 2 }}
+        >
+          ∫
+        </motion.div>
+        <motion.div
+          className="absolute text-5xl opacity-20"
+          style={{ left: '20%', top: '-18%' }}
+          {...floatingBeaker}
+          transition={{ ...floatingBeaker.transition, delay: 8 }}
+        >
+          💊
+        </motion.div>
+        <motion.div
+          className="absolute text-4xl opacity-15"
+          style={{ left: '90%', top: '-7%' }}
+          {...floatingFormula}
+          transition={{ ...floatingFormula.transition, delay: 5 }}
+        >
+          √
+        </motion.div>
+      </div>
+    <section className="min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden">
         <motion.div
           className="absolute top-20 left-10 w-64 h-64 bg-blue-400/20 rounded-full blur-3xl"
           animate={{
@@ -125,7 +218,7 @@ export default function Home() {
             </code>
           </motion.div>
         </div>
-      </section>
+      </section>  
     <section className="py-32 px-4 relative">
         <motion.div
           className="absolute top-0 left-1/4 w-72 h-72 bg-blue-300/10 rounded-full blur-3xl"
@@ -153,10 +246,10 @@ export default function Home() {
               transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
               className="inline-block mb-12"
             >
-              <div className="relative w-[180px] h-[280px] md:w-[220px] md:h-[320px] mx-auto">
+              <div className="relative w-[200px] h-[200px] md:w-[240px] md:h-[240px] mx-auto">
                 <Image
-                  src="/images/character-cool.png"
-                  alt="CoinMeme thinking"
+                  src="/images/character-logo.png"
+                  alt="CoinMeme"
                   fill
                   className="object-contain drop-shadow-2xl"
                 />
@@ -219,7 +312,7 @@ export default function Home() {
               </div>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-8 mt-16">
+            <div className="grid md:grid-cols-2 gap-8 mt-16 mb-12">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -254,6 +347,22 @@ export default function Home() {
                 </div>
               </motion.div>
             </div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="bg-white/50 backdrop-blur-sm p-8 rounded-3xl shadow-xl border border-gray-200/50 max-w-3xl mx-auto"
+            >
+              <div className="relative w-full h-[280px] md:h-[320px]">
+                <Image
+                  src="/images/formula-behold.png"
+                  alt="Behold the Formula"
+                  fill
+                  className="object-contain rounded-lg"
+                />
+              </div>
+            </motion.div>
 
             <motion.p
               className="mt-12 text-2xl md:text-3xl text-gray-700 italic font-light"
@@ -443,7 +552,7 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
             >
               
-            <a    href="https://t.me/CoinMemeCTO"
+           <a     href="https://t.me/CoinMemeCTO"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-14 py-6 bg-blue-500 text-white rounded-full font-bold text-xl md:text-2xl hover:bg-blue-600 hover:shadow-2xl transition-all transform hover:-translate-y-1"
@@ -454,7 +563,7 @@ export default function Home() {
 
             <div className="flex gap-8 justify-center flex-wrap text-lg">
               
-           <a     href="https://x.com/i/communities/2002714238331080902"
+            <a    href="https://x.com/i/communities/2002714238331080902"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-blue-500 transition-colors font-medium"
@@ -463,7 +572,7 @@ export default function Home() {
               </a>
               <span className="text-gray-400">•</span>
               
-           <a     href="https://t.me/CoinMemeCTO"
+            <a    href="https://t.me/CoinMemeCTO"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-blue-500 transition-colors font-medium"
@@ -472,7 +581,7 @@ export default function Home() {
               </a>
               <span className="text-gray-400">•</span>
               
-           <a     href="https://dexscreener.com/solana/gw3hhfzhunahywjrl9fkvybrrifnazc7bs92s5enusrx"
+            <a    href="https://dexscreener.com/solana/gw3hhfzhunahywjrl9fkvybrrifnazc7bs92s5enusrx"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-blue-500 transition-colors font-medium"
@@ -484,7 +593,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="py-12 px-4 border-t border-gray-200/50 bg-white/40 backdrop-blur-sm">
+      <footer className="py-12 px-4 border-t border-gray-200/50 bg-white/40 backdrop-blur-sm relative z-10">
         <div className="max-w-6xl mx-auto text-center text-gray-600">
           <p className="text-base mb-3 font-medium">
             $CoinMeme CTO • Community-driven • No promises, just direction
