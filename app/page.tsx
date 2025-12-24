@@ -1,122 +1,131 @@
-"use client";
-
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { useState } from "react";
 
-const LINKS = {
-  chart: "https://dexscreener.com/solana/gw3hhfzhunahywjrl9fkvybrrifnazc7bs92s5enusrx",
-  telegram: "https://t.me/CoinMemeCTO",
-  x: "https://x.com/i/communities/2002714238331080902",
-};
-
-const CA = "BBqYTFGCj7Uia5qWHHQmxRx4jhQcFHydEynv2r3ipump";
-
-export default function Page() {
-  const [copied, setCopied] = useState(false);
-
-  const copyCA = async () => {
-    await navigator.clipboard.writeText(CA);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 1200);
-  };
-
+export default function Home() {
   return (
-    <main className="min-h-screen bg-zinc-950 text-zinc-100 px-5 py-10">
-      {/* Header */}
-      <header className="max-w-6xl mx-auto flex items-center justify-between">
-        <h1 className="text-xl font-black tracking-tight">
-          Coin-Meme CTO
-        </h1>
-        <nav className="flex gap-4 text-sm">
-          <a href={LINKS.chart} target="_blank">Chart</a>
-          <a href={LINKS.telegram} target="_blank">Telegram</a>
-          <a href={LINKS.x} target="_blank">Community</a>
-        </nav>
-      </header>
+    <main className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-950 to-black text-white">
 
-      {/* Hero */}
-      <section className="max-w-6xl mx-auto mt-16 grid gap-10 md:grid-cols-2 items-center">
-        <div>
-          <h2 className="text-4xl sm:text-5xl font-black leading-tight">
-            The Memecoin Formula<br />
-            <span className="text-emerald-300">Evolved.</span>
-          </h2>
-
-          <p className="mt-4 text-zinc-300 leading-relaxed">
-            No dev. No roadmap. No promises.<br />
-            Just a community-driven experiment.
-          </p>
-
-          <div className="mt-6 flex flex-wrap gap-3">
-            <a
-              href={LINKS.chart}
-              target="_blank"
-              className="border border-white/20 rounded px-4 py-2 hover:bg-white/10 transition"
-            >
-              View Chart
-            </a>
-            <a
-              href={LINKS.telegram}
-              target="_blank"
-              className="border border-white/20 rounded px-4 py-2 hover:bg-white/10 transition"
-            >
-              Join Telegram
-            </a>
-          </div>
-
-          {/* CA */}
-          <div className="mt-6 border border-white/20 rounded p-3 font-mono text-xs">
-            <button onClick={copyCA}>
-              {CA}
-            </button>
-            <div className="mt-1 text-zinc-400">
-              {copied ? "Copied." : "Tap to copy"}
-            </div>
-          </div>
+      {/* HERO */}
+      <section className="relative flex flex-col items-center text-center px-6 pt-24 pb-32">
+        <div className="animate-pulse mb-6 text-xs tracking-widest text-green-400">
+          EXPERIMENT IN PROGRESS
         </div>
 
-        {/* Mascot Image */}
-        <motion.div
-          animate={{ y: [0, -8, 0] }}
-          transition={{ duration: 5, repeat: Infinity }}
-          className="border border-white/20 rounded p-4 bg-black/40"
-        >
-          <Image
-            src="/images/hero.png"
-            alt="Coin-Meme Mascot"
-            width={520}
-            height={360}
-            priority
-          />
-        </motion.div>
+        <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          Coin-Meme CTO
+        </h1>
+
+        <p className="max-w-xl text-slate-300 mb-10">
+          A memecoin experiment that evolved on its own.
+          No roadmap. No promises. Just the formula.
+        </p>
+
+        <Image
+          src="/images/hero.png"
+          alt="Coin Meme Hero"
+          width={420}
+          height={420}
+          priority
+          className="rounded-xl shadow-[0_0_40px_rgba(34,197,94,0.35)]"
+        />
+
+        {/* BUTTONS */}
+        <div className="mt-10 flex flex-wrap gap-4 justify-center">
+          <a
+            href="https://dexscreener.com/solana/gw3hhfzhunahywjrl9fkvybrrifnazc7bs92s5enusrx"
+            target="_blank"
+            className="px-6 py-3 rounded-lg bg-green-500 text-black font-semibold hover:bg-green-400 transition"
+          >
+            View Chart
+          </a>
+
+          <a
+            href="https://t.me/CoinMemeCTO"
+            target="_blank"
+            className="px-6 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 transition"
+          >
+            Telegram
+          </a>
+
+          <a
+            href="https://x.com/i/communities/2002714238331080902"
+            target="_blank"
+            className="px-6 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 transition"
+          >
+            X Community
+          </a>
+        </div>
       </section>
 
-      {/* Formula */}
-      <section className="max-w-6xl mx-auto mt-20 text-center">
-        <h3 className="text-2xl font-black mb-4">The Formula</h3>
-        <p className="font-mono text-lg text-emerald-300">
-          (Humor × Community) ÷ Market Dynamics
+      {/* FORMULA */}
+      <section className="px-6 py-24 flex flex-col items-center gap-12 bg-slate-950">
+        <h2 className="text-3xl font-semibold">
+          The Formula
+        </h2>
+
+        <Image
+          src="/images/formula.png"
+          alt="Coin Meme Formula"
+          width={520}
+          height={520}
+          className="rounded-xl shadow-lg"
+        />
+
+        <p className="max-w-2xl text-slate-300 text-center">
+          Viral Memecoin = (Humor × Community) ÷ Market Dynamics
         </p>
       </section>
 
-      {/* Meme Gallery */}
-      <section className="max-w-6xl mx-auto mt-16 grid gap-4 md:grid-cols-3">
-        {["meme1.png", "meme2.png", "meme3.png"].map((img) => (
-          <div key={img} className="border border-white/20 rounded p-3 bg-black/40">
-            <Image
-              src={`/images/${img}`}
-              alt={img}
-              width={400}
-              height={300}
-            />
-          </div>
-        ))}
+      {/* MOON */}
+      <section className="px-6 py-24 flex flex-col items-center gap-12">
+        <h2 className="text-3xl font-semibold">
+          Moon-Landing Formula
+        </h2>
+
+        <Image
+          src="/images/moon.png"
+          alt="Moon Landing Formula"
+          width={520}
+          height={520}
+          className="rounded-xl shadow-lg"
+        />
+
+        <p className="text-slate-300">
+          BUY + HODL + DCA = MOON
+        </p>
       </section>
 
-      {/* Footer Disclaimer */}
-      <footer className="mt-20 text-center text-xs text-zinc-400">
-        THIS IS AN EXPERIMENT. I REPEAT, THIS IS AN EXPERIMENT.<br />
+      {/* COMMUNITY */}
+      <section className="px-6 py-24 flex flex-col items-center gap-12 bg-slate-950">
+        <h2 className="text-3xl font-semibold">
+          Community
+        </h2>
+
+        <Image
+          src="/images/community.png"
+          alt="Community"
+          width={520}
+          height={520}
+          className="rounded-xl shadow-lg"
+        />
+
+        <p className="text-slate-300 text-xl">
+          Community = EVERYTHING
+        </p>
+      </section>
+
+      {/* CA */}
+      <section className="px-6 py-16 text-center">
+        <p className="text-slate-400 text-sm mb-2">
+          Contract Address
+        </p>
+        <code className="block bg-slate-800 rounded-lg p-4 text-green-400 break-all">
+          BBqYTFGCj7Uia5qWHHQmxRx4jhQcFHydEynv2r3ipump
+        </code>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="px-6 py-10 text-center text-xs text-slate-500">
+        THIS IS AN EXPERIMENT. I REPEAT, THIS IS AN EXPERIMENT.
         FOR ENTERTAINMENT PURPOSES ONLY.
       </footer>
     </main>
